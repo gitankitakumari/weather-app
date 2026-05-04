@@ -85,7 +85,9 @@ open index.html
 ## 🌍 Live Demo
 
 👉 https://gitankitakumari.github.io/weather-app/
-📂 **GitHub Repo:** https://github.com/gitankitakumari/weather-app
+
+📂 **GitHub Repo:
+https://github.com/gitankitakumari/weather-app
 ---
 
 ## ⚠️ Notes
