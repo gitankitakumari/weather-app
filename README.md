@@ -84,7 +84,7 @@ open index.html
 
 ## 🌍 Live Demo
 
-👉 https://your-username.github.io/weather-app/
+👉 https://gitankitakumari.github.io/weather-app/
 
 ---
 
