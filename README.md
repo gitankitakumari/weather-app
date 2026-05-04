@@ -1,6 +1,11 @@
 # 🌦️ ClarityWeather — Smart Weather App
 
-A modern and interactive weather web app that provides real-time weather data, forecast, AQI, and more with a clean UI.
+🔗 **Live Demo:** https://gitankitakumari.github.io/weather-app/
+📂 **GitHub Repo:** https://github.com/gitankitakumari/weather-app
+
+---
+
+A modern and interactive weather web app that provides real-time weather data, forecast, AQI, and more with a clean and responsive UI.
 
 ---
 
@@ -62,8 +67,8 @@ weather-app/
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/your-username/weather-app.git
+```
+git clone https://github.com/gitankitakumari/weather-app.git
 ```
 
 2. Open project folder
@@ -76,18 +81,10 @@ const API_KEY = "your_api_key_here";
 
 4. Run project:
 
-```bash
+```
 open index.html
 ```
 
----
-
-## 🌍 Live Demo
-
-👉 https://gitankitakumari.github.io/weather-app/
-
-📂 **GitHub Repo:
-https://github.com/gitankitakumari/weather-app
 ---
 
 ## ⚠️ Notes
@@ -107,3 +104,4 @@ https://github.com/gitankitakumari/weather-app
 ## ⭐ Support
 
 If you like this project, give it a ⭐ on GitHub!
+
