@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ClarityWeather is a smart weather app">
+
+    <title>ClarityWeather</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- External libs -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+
+    <!-- OPTIONAL: remove if error -->
+    <!-- <link rel="manifest" href="manifest.json"> -->
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <div class="top-bar">
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+        <div class="badge-container">
+            <span class="badge" id="streakBadge">🔥 0 day streak</span>
+            <span class="badge" id="achievementBadge">🏆</span>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>ClarityWeather</h1>
+            <button id="langToggle" onclick="toggleLanguage()">🌐 EN</button>
+        </div>
+
+        <!-- 🔍 SEARCH -->
+        <div class="search-box">
+            <input type="text" id="city" placeholder="Search city...">
+
+            <!-- ✅ FIXED FUNCTION -->
+            <button onclick="searchCity()">🔍</button>
+
+            <button onclick="startVoiceSearch()">🎤</button>
+            <button onclick="getCurrentLocation()">📍</button>
+        </div>
+
+        <!-- RESULT -->
+        <section id="weatherBox">✨ Enter a city to feel the forecast</section>
+
+        <!-- ACTIONS -->
+        <div class="action-buttons">
+            <button onclick="speakWeather()" class="action-btn">🔊 Speak</button>
+            <button onclick="shareWeatherCard()" class="action-btn">📤 Share</button>
+            <button onclick="exportToCalendar()" class="action-btn">📅 Export</button>
+        </div>
+
+        <div id="alertBox" style="display:none;"></div>
+
+        <!-- EXTRA DATA -->
+        <div class="extra-grid">
+
+            <div class="card">
+                <div class="card-title">🌫️ Air Quality</div>
+                <div id="aqiValue">--</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">👕 Clothing</div>
+                <div id="clothingValue">--</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">🌅 Sun</div>
+                <div id="sunValue">--</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="sunFill"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">🟣 UV Index</div>
+                <div id="uvValue">--</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">🌡️ Heat Index</div>
+                <div id="heatIndex">--</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">🌙 Moon Phase</div>
+                <div id="moonPhase">--</div>
+            </div>
+
+        </div>
+
+        <!-- CHART -->
+        <div class="chart-container">
+            <canvas id="tempChart"></canvas>
+        </div>
+
+        <!-- MAP -->
+        <div id="map" style="height:250px; display:none;"></div>
+
+        <!-- HISTORY -->
+        <div id="historyBox">
+            <div class="history-title">📜 Recent Searches</div>
+            <div id="historyList"></div>
+        </div>
+
+    </div>
+</div>
+
+<canvas id="weatherCanvas"></canvas>
+
+<!-- ✅ MODULE SCRIPT -->
+<script type="module" src="./js/main.js"></script>
+
+</body>
+</html>

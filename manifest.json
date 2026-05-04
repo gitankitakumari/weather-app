@@ -1,0 +1,13 @@
+{
+    "name": "Pro Weather App",
+    "short_name": "WeatherPro",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0a2a3f",
+    "theme_color": "#667eea",
+    "icons": [{
+        "src": "https://via.placeholder.com/192",
+        "sizes": "192x192",
+        "type": "image/png"
+    }]
+}
